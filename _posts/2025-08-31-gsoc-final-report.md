@@ -61,14 +61,15 @@ Although the project is about creating a dialog, the hardest part was unifying t
 - [Adapting Calc](https://gerrit.libreoffice.org/c/core/+/190026)
 
 ### What's Left
-- Add WYSIWYG preview of table styles in the Writer styles sidebar.
 - Add UI tests to verify the workflow.
 
 ### Limitations
 - **Backward compatibility**: Old `.odt` files open correctly, but since the internal structure of table styles has changed to follow ODF, when you interact with the table (inserting/deleting rows/columns), the style of the table changes.
 - **Number formatting** in the Table Styles dialog is not yet functional (planned fix).
+- Table Styles are currently shared across all documents. If you edit a style in one document, the change will persist in other documents.
 
 ### Future Scope
+- Add WYSIWYG preview of table styles in the Writer styles sidebar.
 - In Impress, the Table styles panel has checkboxes to enable/disable certain element styles, I have already implemented the backend functionality, depending on the UX team's approval, this can be added to the new dialog or sidebar.
 
 ![Impress Table Styles](/assets/impress_table_styles.png){: width="400" }{:style="display:block; margin-left:auto; margin-right:auto;"}
